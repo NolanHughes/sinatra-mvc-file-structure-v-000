@@ -5,10 +5,14 @@ class Dog
 
   def initialize(name, breed, age)
     @name, @breed, @age = name, breed, age
-    @@all << self
+    self.save
   end
 
   def self.all
     @@all
+  end
+
+  def save
+    @@all << self
   end
 end
